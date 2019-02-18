@@ -7,4 +7,5 @@ Steps:
 4. Runs these commands in seperater terminals in order
 	- bin/zookeeper-server-start.sh cfig/zookeeper.properties
 	- bin/kafka-server-start.sh config/server.properties
+	- bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic hello
 	- python TwitterStreaming.py
