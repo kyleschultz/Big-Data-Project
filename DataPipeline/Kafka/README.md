@@ -1,4 +1,4 @@
-# Test streaming twiiter data and storing them in Kafka using the topic 'hello'
+# Test streaming twitter data and storing them in Kafka using the topic 'hello'
 
 Steps:
 1. Get twitter creds (either get file from me or get your own)
