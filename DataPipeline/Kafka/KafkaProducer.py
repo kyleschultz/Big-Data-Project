@@ -16,7 +16,7 @@ CONSUMER_SECRET = content[3]
 class StdOutListener(StreamListener):
     def on_data(self, data):
         producer.send_messages("tweets", data.encode('utf-8'))
-        print (data)
+        #print (data)
         return True
     def on_error(self, status):
         print (status)
