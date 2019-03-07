@@ -13,7 +13,6 @@ ACCESS_SECRET = content[1]
 CONSUMER_KEY = content[2]
 CONSUMER_SECRET = content[3]
 
-
 class StdOutListener(StreamListener):
     def on_data(self, data):
         producer.send_messages("tweets", data.encode('utf-8'))
@@ -28,3 +27,4 @@ l = StdOutListener()
 auth = OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 stream = Stream(auth, l)
+stream.filter(track=["a", "I", "the", "be", "to", "of", "and", "in", "that", "have"])
